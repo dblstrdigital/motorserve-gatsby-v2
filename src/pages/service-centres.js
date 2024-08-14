@@ -109,46 +109,47 @@ const bannerData = {
 
   return (
     <Page title={'locations'}>
-      <Box as="main" className={`content--locations`}>
-        <HeaderSlim slide={bannerData} as="h1" />
-        <RichText richText={page._rawRichTextOne || ''} />
-        <MaxContainer className="card-grid">
-          <Spacer size="2" />
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              maxWidth: '1180px',
-              margin: '0 auto',
-              px: 4,
-              mb: 4,
-            }}
-          >
-            <CentreLocator centres={locations} />
-          </Flex>
-          <Spacer size="2" />
-          {page._rawRichTextTwo && (
-            <>
-              <RichText richText={page._rawRichTextTwo} />
-              <Spacer size="3" />
-            </>
-          )}
-          {page.bannerMessage && (
-            <FullWidthBannerMessage
-              data={{
-                title: page.bannerMessage.title || '',
-                text: page.bannerMessage._rawSimpleText,
-                image: {
-                  path: page.bannerMessage.image.asset.url,
-                  alt: page.bannerMessage.image.alt,
-                },
-                ctaButton:
-                  page.bannerMessage.ctaButton.title &&
-                  page.bannerMessage.ctaButton,
-              }}
-            />
-          )}
-        </MaxContainer>
-      </Box>
+     <Box as="main" className={`content--locations`}>
+  <HeaderSlim slide={bannerData} as="h1" />
+  {page && page._rawRichTextOne && <RichText richText={page._rawRichTextOne} />}
+  <MaxContainer className="card-grid">
+    <Spacer size="2" />
+    <Flex
+      sx={{
+        flexDirection: 'column',
+        maxWidth: '1180px',
+        margin: '0 auto',
+        px: 4,
+        mb: 4,
+      }}
+    >
+      <CentreLocator centres={locations} />
+    </Flex>
+    <Spacer size="2" />
+    {page && page._rawRichTextTwo && (
+      <>
+        <RichText richText={page._rawRichTextTwo} />
+        <Spacer size="3" />
+      </>
+    )}
+    {page && page.bannerMessage && (
+      <FullWidthBannerMessage
+        data={{
+          title: page.bannerMessage.title || '',
+          text: page.bannerMessage._rawSimpleText,
+          image: {
+            path: page.bannerMessage.image.asset.url,
+            alt: page.bannerMessage.image.alt,
+          },
+          ctaButton:
+            page.bannerMessage.ctaButton.title &&
+            page.bannerMessage.ctaButton,
+        }}
+      />
+    )}
+  </MaxContainer>
+</Box>
+
     </Page>
   );
 };
