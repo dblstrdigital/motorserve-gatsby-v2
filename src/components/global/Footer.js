@@ -309,14 +309,8 @@ const Footer = () => {
                 <SecondaryItem key={index} item={item} index={index} />
               ))}
             </Box>
-            <Box
-              sx={{
-                mt: [4, 4, 4, 6],
-                mb: 4,
-                flex: ['0 1 100%', '0 1 100%', '', '0 1 700px', '0 1 908px'],
-                color: 'white',
-              }}
-            >
+            <Box>
+            {footerQuery.sanityFooterDisclaimer && footerQuery.sanityFooterDisclaimer._rawDisclaimerText ? (
               <SimpleText
                 sx={{
                   p: {
@@ -333,11 +327,13 @@ const Footer = () => {
                     },
                   },
                 }}
-                simpleText={
-                  footerQuery.sanityFooterDisclaimer._rawDisclaimerText
-                }
+                simpleText={footerQuery.sanityFooterDisclaimer._rawDisclaimerText}
               />
-            </Box>
+            ) : (
+              <p>No disclaimer text available.</p> // Or any fallback content
+            )}
+          </Box>
+
           </Flex>
         </FooterInner>
       </MaxContainer>
