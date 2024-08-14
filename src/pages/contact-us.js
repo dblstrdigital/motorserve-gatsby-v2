@@ -75,13 +75,14 @@ const ContactUs = ({ data, errors }) => {
 
   if (errors) return { errors };
   const { page, stores } = data;
+ 
   const bannerData = {
-  pageHeading: page.headerPageSlim ? page.headerPageSlim.pageHeading : 'Contact Us',
-  image: {
-    path: page.headerPageSlim && page.headerPageSlim.image ? page.headerPageSlim.image.asset.url : 'https://cdn.sanity.io/images/ap69w8f0/develop/1a5103cd0f163148ff0b58f26c6e49e84ef37405-1440x400.png',
-    alt: page.headerPageSlim && page.headerPageSlim.image ? page.headerPageSlim.image.alt : 'Contact Us',
-  },
-};
+    pageHeading: (page && page.headerPageSlim && page.headerPageSlim.pageHeading) ? page.headerPageSlim.pageHeading : 'Contact Us',
+    image: {
+      path: (page && page.headerPageSlim && page.headerPageSlim.image && page.headerPageSlim.image.asset && page.headerPageSlim.image.asset.url) ? page.headerPageSlim.image.asset.url : ' ',
+      alt: (page && page.headerPageSlim && page.headerPageSlim.image && page.headerPageSlim.image.alt) ? page.headerPageSlim.image.alt : 'Contact Us',
+    },
+  };
 
 
   
