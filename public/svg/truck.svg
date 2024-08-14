@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/truck</title>
+    <g id="icon/truck" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 6.000000)" fill="#04BAE0">
+            <path d="M28,16 C28,18.2091813 26.2091813,20 24,20 C21.7909908,20 20,18.2091813 20,16 C20,13.7908187 21.7909908,12 24,12 C26.2091813,12 28,13.7908187 28,16" id="Fill-1"></path>
+            <path d="M16.0000816,0 L16.0000816,0 L0,0 L0,16 L16.0000816,16 L32,16 C32,7.16357738 24.8367856,0 16.0000816,0" id="Fill-3"></path>
+            <path d="M12,16 C12,18.2091813 10.2091813,20 8,20 C5.79099084,20 4,18.2091813 4,16 C4,13.7908187 5.79099084,12 8,12 C10.2091813,12 12,13.7908187 12,16" id="Fill-5"></path>
+        </g>
+    </g>
+</svg>

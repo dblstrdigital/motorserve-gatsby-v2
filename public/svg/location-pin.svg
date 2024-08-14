@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/location-pin-active</title>
+    <g id="icon/location-pin-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 1.000000)">
+            <path d="M21.9486002,3.63938891 C26.9695142,8.49235388 26.9695142,16.3605367 21.9486002,21.2132784 L12.8571429,30 L3.76568554,21.2132784 C-1.25522851,16.3605367 -1.25522851,8.49235388 3.76568554,3.63938891 C8.78683056,-1.21312964 16.9274552,-1.21312964 21.9486002,3.63938891 Z" id="Combined-Shape" stroke="#1D1655" stroke-width="2" fill="#1D1655"></path>
+            <path d="M18.2142857,12.8571429 C18.2142857,15.8157276 15.8157276,18.2142857 12.8571429,18.2142857 C9.89828589,18.2142857 7.5,15.8157276 7.5,12.8571429 C7.5,9.89828589 9.89828589,7.5 12.8571429,7.5 C15.8157276,7.5 18.2142857,9.89828589 18.2142857,12.8571429 Z" id="Stroke-40" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

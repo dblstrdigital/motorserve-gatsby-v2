@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/mark</title>
+    <g id="icon/mark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.133316, 17.000000)"  fill="#04BAE0">
+            <path d="M31.6167728,15.3007912 L31.6167728,7.10542736e-15 C23.10169,0.115516484 16.2131465,6.8849011 16,15.3007912 L31.6167728,15.3007912 Z" id="Fill-4"></path>
+            <path d="M15.6167728,15.3007912 L15.6167728,7.10542736e-15 C7.10169002,0.115516484 0.213146497,6.8849011 -6.67910172e-13,15.3007912 L15.6167728,15.3007912 Z" id="Fill-4"></path>
+        </g>
+    </g>
+</svg>
