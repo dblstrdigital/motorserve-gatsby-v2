@@ -98,13 +98,14 @@ const ServiceCentres = ({ data, errors }) => {
   if (errors) return { errors };
   const locations = mapEdgesToNodes(data.locations);
   const { page } = data;
+
   const bannerData = {
-    pageHeading: page.headerPageSlim.pageHeading,
-    image: {
-      path: page.headerPageSlim.image.asset.url,
-      alt: page.headerPageSlim.image.alt,
-    },
-  };
+  pageHeading: page.headerPageSlim ? page.headerPageSlim.pageHeading : 'Location',
+  image: {
+    path: page.headerPageSlim && page.headerPageSlim.image ? page.headerPageSlim.image.asset.url : 'https://cdn.sanity.io/images/ap69w8f0/develop/1a5103cd0f163148ff0b58f26c6e49e84ef37405-1440x400.png',
+    alt: page.headerPageSlim && page.headerPageSlim.image ? page.headerPageSlim.image.alt : 'Location',
+  },
+};
 
   return (
     <Page title={'locations'}>
