@@ -215,24 +215,22 @@ const Home = ({ data, errors }) => {
   const carousel = data?.page?.headerCarousel?.carousel;
   const headerCarouselSlides = [
     {
-      showBanner: carousel.carouselOne.enableBanner,
-      pageHeading: carousel.carouselOne.pageHeading,
-      headerText: carousel.carouselOne.headerText
-        ? carousel.carouselOne.headerText
-        : '',
-      largeImage: carousel.carouselOne.responsiveImage.largeImage
+      showBanner: carousel?.carouselOne?.enableBanner ?? false,
+      pageHeading: carousel?.carouselOne?.pageHeading ?? '',
+      headerText: carousel?.carouselOne?.headerText ?? '',
+      largeImage: carousel?.carouselOne?.responsiveImage?.largeImage
         ? {
             path: carousel.carouselOne.responsiveImage.largeImage.asset.url,
             alt: carousel.carouselOne.responsiveImage.alt,
           }
         : null,
-      smallImage: carousel.carouselOne.responsiveImage.smallImage
+      smallImage: carousel?.carouselOne?.responsiveImage?.smallImage
         ? {
             path: carousel.carouselOne.responsiveImage.smallImage.asset.url,
             alt: carousel.carouselOne.responsiveImage.alt,
           }
         : null,
-      cta: carousel.carouselOne.cta.title
+      cta: carousel?.carouselOne?.cta?.title
         ? {
             route: carousel.carouselOne.cta.route,
             link: carousel.carouselOne.cta.link,
@@ -241,32 +239,22 @@ const Home = ({ data, errors }) => {
         : null,
     },
     {
-      showBanner: carousel.carouselTwo.enableBanner,
-      pageHeading: carousel.carouselTwo.pageHeading,
-      headerText: carousel.carouselTwo.headerText,
-      largeImage: carousel.carouselTwo.responsiveImage.largeImage
+      showBanner: carousel?.carouselTwo?.enableBanner ?? false,
+      pageHeading: carousel?.carouselTwo?.pageHeading ?? '',
+      headerText: carousel?.carouselTwo?.headerText ?? '',
+      largeImage: carousel?.carouselTwo?.responsiveImage?.largeImage
         ? {
             path: carousel.carouselTwo.responsiveImage.largeImage.asset.url,
             alt: carousel.carouselTwo.responsiveImage.alt,
           }
         : null,
-      smallImage: carousel.carouselTwo.responsiveImage.smallImage
+      smallImage: carousel?.carouselTwo?.responsiveImage?.smallImage
         ? {
             path: carousel.carouselTwo.responsiveImage.smallImage.asset.url,
             alt: carousel.carouselTwo.responsiveImage.alt,
           }
         : null,
-      firstLogo: carousel.carouselTwo.firstLogo
-        ? {
-            path: carousel.carouselTwo.firstLogo.asset.url,
-          }
-        : null,
-      secondLogo: carousel.carouselTwo.secondLogo
-        ? {
-            path: carousel.carouselTwo.secondLogo.asset.url,
-          }
-        : null,
-      cta: carousel.carouselTwo.cta.title
+      cta: carousel?.carouselTwo?.cta?.title
         ? {
             route: carousel.carouselTwo.cta.route,
             link: carousel.carouselTwo.cta.link,
@@ -275,32 +263,22 @@ const Home = ({ data, errors }) => {
         : null,
     },
     {
-      showBanner: carousel.carouselThree.enableBanner,
-      pageHeading: carousel.carouselThree.pageHeading,
-      headerText: carousel.carouselThree.headerText,
-      largeImage: carousel.carouselThree.responsiveImage.largeImage
+      showBanner: carousel?.carouselThree?.enableBanner ?? false,
+      pageHeading: carousel?.carouselThree?.pageHeading ?? '',
+      headerText: carousel?.carouselThree?.headerText ?? '',
+      largeImage: carousel?.carouselThree?.responsiveImage?.largeImage
         ? {
             path: carousel.carouselThree.responsiveImage.largeImage.asset.url,
             alt: carousel.carouselThree.responsiveImage.alt,
           }
         : null,
-      smallImage: carousel.carouselThree.responsiveImage.smallImage
+      smallImage: carousel?.carouselThree?.responsiveImage?.smallImage
         ? {
             path: carousel.carouselThree.responsiveImage.smallImage.asset.url,
             alt: carousel.carouselThree.responsiveImage.alt,
           }
         : null,
-      firstLogo: carousel.carouselThree.firstLogo
-        ? {
-            path: carousel.carouselThree.firstLogo.asset.url,
-          }
-        : null,
-      secondLogo: carousel.carouselThree.secondLogo
-        ? {
-            path: carousel.carouselThree.secondLogo.asset.url,
-          }
-        : null,
-      cta: carousel.carouselThree.cta.title
+      cta: carousel?.carouselThree?.cta?.title
         ? {
             route: carousel.carouselThree.cta.route,
             link: carousel.carouselThree.cta.link,
