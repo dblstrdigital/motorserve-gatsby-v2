@@ -287,15 +287,16 @@ const Home = ({ data, errors }) => {
         : null,
     },
   ];
-  const gridTwo = data.page.cardGridTwo;
-  const gridThree = data.page.cardGridThree;
-  const bannerIcons = data.page.bannerIcons;
-  const bannerMessage = data.page.bannerMessage;
+  const gridTwo = data.page ? data.page.cardGridTwo : null;
+const gridThree = data.page ? data.page.cardGridThree : null;
+const bannerIcons = data.page ? data.page.bannerIcons : null;
+const bannerMessage = data.page ? data.page.bannerMessage : null;
 
-  return (
-    <Page title={'home'}>
-      <Box as="main" className={`content--home`}>
-        <HeaderBannerCarousel slides={headerCarouselSlides} />
+return (
+  <Page title={'home'}>
+    <Box as="main" className={`content--home`}>
+      <HeaderBannerCarousel slides={headerCarouselSlides} />
+      {gridTwo && (
         <CardGrid
           columns="2"
           data={{
@@ -303,7 +304,9 @@ const Home = ({ data, errors }) => {
             cards: gridTwo.cards,
           }}
         />
-        <Spacer size="3" />
+      )}
+      <Spacer size="3" />
+      {gridThree && (
         <CardGrid
           columns="3"
           data={{
@@ -311,14 +314,20 @@ const Home = ({ data, errors }) => {
             cards: gridThree.cards,
           }}
         />
-        <Spacer size="3" />
+      )}
+      <Spacer size="3" />
+      {bannerIcons && (
         <FullWidthBannerIcons
           title={bannerIcons.title}
           icons={bannerIcons.icons}
         />
-        <Spacer size="4" />
+      )}
+      <Spacer size="4" />
+      {data.page && data.page._rawRichText && (
         <RichText richText={data.page._rawRichText} />
-        <Spacer size="4" />
+      )}
+      <Spacer size="4" />
+      {bannerMessage && (
         <FullWidthBannerMessage
           data={{
             title: bannerMessage.title || '',
@@ -330,9 +339,11 @@ const Home = ({ data, errors }) => {
             ctaButton: bannerMessage.ctaButton.title && bannerMessage.ctaButton,
           }}
         />
-      </Box>
-    </Page>
-  );
+      )}
+    </Box>
+  </Page>
+);
+
 };
 
 export default Home;
