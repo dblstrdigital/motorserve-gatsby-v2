@@ -92,7 +92,7 @@ const ContactUs = ({ data, errors }) => {
     <Page title={'contact-us'}>
       <Box as="main" className={`content--contact-us`}>
         <HeaderSlim slide={bannerData} as="h1" />
-        {page._rawRichText && (
+        {page && page._rawRichText && (
           <>
             <RichText richText={page._rawRichText} />
             <Spacer size="2" />
