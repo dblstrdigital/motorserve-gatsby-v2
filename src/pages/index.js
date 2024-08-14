@@ -211,7 +211,8 @@ const Home = ({ data, errors }) => {
     });
   }, []);
   if (errors) return { errors };
-  const carousel = data.page.headerCarousel.carousel;
+ // const carousel = data.page.headerCarousel.carousel;
+  const carousel = data?.page?.headerCarousel?.carousel;
   const headerCarouselSlides = [
     {
       showBanner: carousel.carouselOne.enableBanner,
