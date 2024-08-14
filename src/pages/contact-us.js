@@ -99,20 +99,22 @@ const ContactUs = ({ data, errors }) => {
           </>
         )}
         <ContactForm stores={stores.nodes} />
-        {page.bannerMessage && (
-          <FullWidthBannerMessage
-            data={{
-              title: page.bannerMessage.title || '',
-              text: page.bannerMessage._rawSimpleText,
-              image: {
-                path: page.bannerMessage.image.asset.url,
-                alt: page.bannerMessage.image.alt,
-              },
-              ctaButton:
-                page.bannerMessage.ctaButton.title &&
-                page.bannerMessage.ctaButton,
-            }}
-          />
+        {page && page.bannerMessage && (
+        <FullWidthBannerMessage
+          data={{
+            title: (page.bannerMessage && page.bannerMessage.title) || '',
+            text: (page.bannerMessage && page.bannerMessage._rawSimpleText) || '',
+            image: {
+              path: (page.bannerMessage && page.bannerMessage.image.asset.url) || '',
+              alt: (page.bannerMessage && page.bannerMessage.image.alt) || '',
+            },
+            ctaButton:
+              (page.bannerMessage && page.bannerMessage.ctaButton && page.bannerMessage.ctaButton.title) ? 
+              page.bannerMessage.ctaButton : 
+              null,
+          }}
+        />
+
         )}
       </Box>
     </Page>
