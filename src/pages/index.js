@@ -194,14 +194,11 @@ export const query = graphql`
 `;
 
 export function Head({ data }) {
+  const seoTitle = data?.page?.seoTitle || 'Car Servicing, Repairs, Mechanics in Sydney and NSW | Motorserve'; 
+  const seoDescription = data?.page?.seoDescription || 'Visit one of our Motorserve service centres across NSW and ACT today for expert car servicing and repairs.'; 
+
   return (
-    <>
-      <SEO title={data.page.seoTitle} description={data.page.seoDescription} />
-      <meta
-        name="google-site-verification"
-        content="FB4VdzcloTyJCWwA228aWzkmTITRpVkYdxa-nw0LKFA"
-      />
-    </>
+    <SEO title={seoTitle} description={seoDescription} />
   );
 }
 
