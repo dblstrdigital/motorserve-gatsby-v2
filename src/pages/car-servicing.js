@@ -246,19 +246,20 @@ const CarServicing = ({ data, errors }) => {
   if (errors) return { errors };
   const { page } = data;
   const bannerData = {
-    pageHeading: page.headerPage ? page.headerPage.pageHeading : '',
-    headerText: page.headerPage ? page.headerPage.headerText || '' : '',
-    image: page.headerPage && page.headerPage.image ? {
-      path: page.headerPage.image.asset.url,
-      alt: page.headerPage.image.alt,
-    } : { path: '', alt: '' },
-    cta: page.headerPage && page.headerPage.cta && page.headerPage.cta.title
-      ? {
-          route: page.headerPage.cta.route,
-          title: page.headerPage.cta.title,
-        }
-      : null,
-  };
+  pageHeading: page && page.headerPage ? page.headerPage.pageHeading : '',
+  headerText: page && page.headerPage ? page.headerPage.headerText || '' : '',
+  image: page && page.headerPage && page.headerPage.image ? {
+    path: page.headerPage.image.asset.url,
+    alt: page.headerPage.image.alt,
+  } : { path: '', alt: '' },
+  cta: page && page.headerPage && page.headerPage.cta && page.headerPage.cta.title
+    ? {
+        route: page.headerPage.cta.route,
+        title: page.headerPage.cta.title,
+      }
+    : null,
+};
+
 
   
   return (
