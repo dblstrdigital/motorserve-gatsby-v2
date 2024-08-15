@@ -105,7 +105,7 @@ const ServiceCentres = ({ data, errors }) => {
           }}
         />
         <Spacer size="2" />
-        {page._rawRichTextOne && (
+        {page?._rawRichTextOne && (
           <>
             <RichTextBookingForm richText={page._rawRichTextOne} />
             <Spacer size="3" />
