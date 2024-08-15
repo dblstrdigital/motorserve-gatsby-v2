@@ -268,8 +268,9 @@ const CarServicing = ({ data, errors }) => {
         <HeaderBanner as="h1" slide={bannerData} />
         <ComparisonTable
           tableData={comparisonTableData}
-          footerCopy={data.page.comparisonFooterCopy}
+          footerCopy={data?.page?.comparisonFooterCopy || ''}
         />
+
         <Spacer size="3" />
 
         {page.bannerIcons && (
