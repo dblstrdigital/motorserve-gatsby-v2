@@ -30,6 +30,7 @@ module.exports = {
       resolve: 'gatsby-source-sanity',
       options: {
         ...clientConfig.sanity,
+        projectId: "ap69w8f0",
         token: process.env.SANITY_TOKEN,
         watchMode: true,
       },
