@@ -246,13 +246,13 @@ const CarServicing = ({ data, errors }) => {
   if (errors) return { errors };
   const { page } = data;
   const bannerData = {
-    pageHeading: page.headerPage.pageHeading,
-    headerText: page.headerPage.headerText || '',
-    image: {
+    pageHeading: page.headerPage ? page.headerPage.pageHeading : '',
+    headerText: page.headerPage ? page.headerPage.headerText || '' : '',
+    image: page.headerPage && page.headerPage.image ? {
       path: page.headerPage.image.asset.url,
       alt: page.headerPage.image.alt,
-    },
-    cta: page.headerPage.cta.title
+    } : { path: '', alt: '' },
+    cta: page.headerPage && page.headerPage.cta && page.headerPage.cta.title
       ? {
           route: page.headerPage.cta.route,
           title: page.headerPage.cta.title,
@@ -260,6 +260,7 @@ const CarServicing = ({ data, errors }) => {
       : null,
   };
 
+  
   return (
     <Page title={'carServicing'}>
       <Box as="main" className={`content--car-servicing`}>
