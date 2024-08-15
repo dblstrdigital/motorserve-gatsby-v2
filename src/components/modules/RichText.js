@@ -77,8 +77,8 @@ const WYSIWYG = ({ ...props }) => (
 const serializers = {
   marks: {
     link: ({ mark, children }) => {
-      let urlRegex = new RegExp(/(https?:\/\/[^\s]+)/g);
-      let isUrl = urlRegex.test(mark.href);
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const isUrl = urlRegex.test(mark.href);
       return isUrl ? (
         <a
           href={mark.href}
@@ -116,20 +116,18 @@ const serializers = {
   },
 };
 
-const RichText = ({ richText }) => {
-  return (
-    <MaxContainer>
-      <Box sx={{ ...gridFallbackStylesColumn }}>
-        <Box sx={{ ...containerInnerStyles }}>
-          <Grid>
-            <WYSIWYG>
-              <BlockContent blocks={richText} serializers={serializers} />
-            </WYSIWYG>
-          </Grid>
-        </Box>
+const RichText = ({ richText }) => (
+  <MaxContainer>
+    <Box sx={{ ...gridFallbackStylesColumn }}>
+      <Box sx={{ ...containerInnerStyles }}>
+        <Grid>
+          <WYSIWYG>
+            <BlockContent blocks={richText} serializers={serializers} />
+          </WYSIWYG>
+        </Grid>
       </Box>
-    </MaxContainer>
-  );
-};
+    </Box>
+  </MaxContainer>
+);
 
 export default RichText;

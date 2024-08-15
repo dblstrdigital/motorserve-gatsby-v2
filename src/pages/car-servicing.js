@@ -246,74 +246,85 @@ const CarServicing = ({ data, errors }) => {
   if (errors) return { errors };
   const { page } = data;
   const bannerData = {
-    pageHeading: page.headerPage.pageHeading,
-    headerText: page.headerPage.headerText || '',
-    image: {
-      path: page.headerPage.image.asset.url,
-      alt: page.headerPage.image.alt,
-    },
-    cta: page.headerPage.cta.title
-      ? {
-          route: page.headerPage.cta.route,
-          title: page.headerPage.cta.title,
-        }
-      : null,
-  };
+  pageHeading: page && page.headerPage ? page.headerPage.pageHeading : '',
+  headerText: page && page.headerPage ? page.headerPage.headerText || '' : '',
+  image: page && page.headerPage && page.headerPage.image ? {
+    path: page.headerPage.image.asset.url,
+    alt: page.headerPage.image.alt,
+  } : { path: '', alt: '' },
+  cta: page && page.headerPage && page.headerPage.cta && page.headerPage.cta.title
+    ? {
+        route: page.headerPage.cta.route,
+        title: page.headerPage.cta.title,
+      }
+    : null,
+};
 
+
+  
   return (
     <Page title={'carServicing'}>
-      <Box as="main" className={`content--car-servicing`}>
-        <HeaderBanner as="h1" slide={bannerData} />
-        <ComparisonTable
-          tableData={comparisonTableData}
-          footerCopy={data.page.comparisonFooterCopy}
+  <Box as="main" className={`content--car-servicing`}>
+    <HeaderBanner as="h1" slide={bannerData} />
+    <ComparisonTable
+      tableData={comparisonTableData}
+      footerCopy={data?.page?.comparisonFooterCopy || ''}
+    />
+
+    <Spacer size="3" />
+
+    {/* Check if page is not null or undefined before accessing bannerIcons */}
+    {page?.bannerIcons && (
+      <>
+        <FullWidthBannerIcons
+          title={page.bannerIcons.title}
+          icons={page.bannerIcons.icons}
         />
         <Spacer size="3" />
+      </>
+    )}
+    
+    {/* Check if page is not null or undefined before accessing _rawRichText */}
+    {page?._rawRichText && (
+      <>
+        <RichText richText={page._rawRichText} />
+        <Spacer size="3" />
+      </>
+    )}
+    
+    {/* Check if page is not null or undefined before accessing cardGridThree */}
+    {page?.cardGridThree && (
+      <>
+        <CardGrid
+          columns="3"
+          data={{
+            textField: page.cardGridThree.textField,
+            cards: page.cardGridThree.cards,
+          }}
+        />
+        <Spacer size="3" />
+      </>
+    )}
+    
+    {/* Check if page is not null or undefined before accessing bannerMessage */}
+    {page?.bannerMessage && (
+      <FullWidthBannerMessage
+        data={{
+          title: page.bannerMessage.title || '',
+          text: page.bannerMessage._rawSimpleText,
+          image: {
+            path: page.bannerMessage.image.asset.url,
+            alt: page.bannerMessage.image.alt,
+          },
+          ctaButton:
+            page.bannerMessage.ctaButton.title &&
+            page.bannerMessage.ctaButton,
+        }}
+      />
+    )}
+  </Box>
+</Page>
 
-        {page.bannerIcons && (
-          <>
-            <FullWidthBannerIcons
-              title={page.bannerIcons.title}
-              icons={page.bannerIcons.icons}
-            />
-            <Spacer size="3" />
-          </>
-        )}
-        {page._rawRichText && (
-          <>
-            <RichText richText={page._rawRichText} />
-            <Spacer size="3" />
-          </>
-        )}
-        {page.cardGridThree && (
-          <>
-            <CardGrid
-              columns="3"
-              data={{
-                textField: page.cardGridThree.textField,
-                cards: page.cardGridThree.cards,
-              }}
-            />
-            <Spacer size="3" />
-          </>
-        )}
-        {page.bannerMessage && (
-          <FullWidthBannerMessage
-            data={{
-              title: page.bannerMessage.title || '',
-              text: page.bannerMessage._rawSimpleText,
-              image: {
-                path: page.bannerMessage.image.asset.url,
-                alt: page.bannerMessage.image.alt,
-              },
-              ctaButton:
-                page.bannerMessage.ctaButton.title &&
-                page.bannerMessage.ctaButton,
-            }}
-          />
-        )}
-      </Box>
-    </Page>
   );
 };
 
