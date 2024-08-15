@@ -83,11 +83,6 @@ const ContactUs = ({ data, errors }) => {
       alt: (page && page.headerPageSlim && page.headerPageSlim.image && page.headerPageSlim.image.alt) ? page.headerPageSlim.image.alt : 'Contact Us',
     },
   };
-
-
-  
-  
-
   return (
     <Page title={'contact-us'}>
       <Box as="main" className={`content--contact-us`}>
