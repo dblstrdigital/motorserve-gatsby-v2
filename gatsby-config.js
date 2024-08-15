@@ -31,6 +31,7 @@ module.exports = {
       options: {
         ...clientConfig.sanity,
         projectId: "ap69w8f0",
+        dataset: "develop", 
         token: process.env.SANITY_TOKEN,
         watchMode: true,
       },
