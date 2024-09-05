@@ -291,7 +291,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                     <Heading.H2
                       as={as}
                       sx={{
-                        fontSize: [9, '', '', 10],
+                        fontSize: [8, '', '', 9],
                         lineHeight: '1',
                         pr: ['', '', '40px'],
                         flex: ['1 0 100%', '', '0 1 50%', '0 1 40%'],
