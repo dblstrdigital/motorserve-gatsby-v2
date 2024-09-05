@@ -53,7 +53,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window,document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', 'YOUR_PIXEL_ID_HERE'); 
+          fbq('init', '1436834763631890'); 
           fbq('track', 'PageView');
         `,
       }}
