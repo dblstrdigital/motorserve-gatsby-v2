@@ -34,12 +34,6 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       }}
     />,
     <script key="load" src={process.env.GATSBY_LOAD_URL}></script>,
-    // <script
-    //   id="podium-widget"
-    //   key="podium-widget"
-    //   src="https://connect.podium.com/widget.js#ORG_TOKEN=a166afcb-0f12-4671-bf28-930da28e125d"
-    //   data-organization-api-token="a166afcb-0f12-4671-bf28-930da28e125d"
-    // />,
     <script
       key="hotjar"
       dangerouslySetInnerHTML={{
