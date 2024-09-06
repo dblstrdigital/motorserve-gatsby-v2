@@ -40,6 +40,19 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     //   src="https://connect.podium.com/widget.js#ORG_TOKEN=a166afcb-0f12-4671-bf28-930da28e125d"
     //   data-organization-api-token="a166afcb-0f12-4671-bf28-930da28e125d"
     // />,
+    <script
+      key="hotjar"
+      dangerouslySetInnerHTML={{
+        __html: `(function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5125301,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+      }}
+    />,
 <script
       key="meta-pixel"
       id="meta-pixel"
