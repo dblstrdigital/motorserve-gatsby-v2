@@ -233,7 +233,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                       objectFit: 'cover',
                       objectPosition: '75%',
                     },
-                    bg: 'navy',
+                    bg: '#000',
                   }}
                 />
 
@@ -252,6 +252,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                         top: '0',
                         left: '50%',
                         transform: 'translateX(-50%)',
+                        filter: 'grayscale(1)',
                         bg: 'navy',
                         '@supports (object-fit: cover)': {
                           objectFit: 'cover',
