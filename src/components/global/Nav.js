@@ -452,32 +452,6 @@ const Nav = ({ hideCTA }) => {
       </Box>
       <Button
         variant="navy"
-        hasIcon="true"
-        sx={{
-          display: ['flex', '', '', 'none'],
-          minWidth: '120px',
-          px: [0, 2],
-          alignSelf: 'stretch',
-          mr: 'auto',
-          ml: [0, 3],
-          borderRadius: 0,
-          textTransform: 'none',
-          fontSize: [2, 2, 3],
-          svg: {
-            width: '14px',
-            mr: 2,
-            mt: '-2px',
-            height: 'auto',
-          },
-        }}
-        as="a"
-        href="tel:1300 869 585"
-        data-tracking={`link-click:Phone`}
-      >
-        <Phone /> 1300 869 585
-      </Button>
-      <Button
-        variant="navy"
         onClick={(event) => {
           event.preventDefault();
           setMobileMenuOpen(!mobileMenuOpen);
