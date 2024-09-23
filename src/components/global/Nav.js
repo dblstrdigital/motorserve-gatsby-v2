@@ -119,29 +119,6 @@ const NavBar = ({ menuOpen, ...props }) => {
       >
         {props.children}
       </Box>
-      <Button
-        variant="navy"
-        hasIcon="true"
-        sx={{
-          minWidth: '160px',
-          px: [2],
-          alignSelf: 'stretch',
-          ml: ['', '', '', 'auto'],
-          borderRadius: 0,
-          fontSize: [2, 2, 3],
-          svg: {
-            width: '14px',
-            height: '14px',
-            mr: 2,
-            mt: '-2px',
-          },
-        }}
-        as="a"
-        href="tel:792 563"
-        data-tracking={`link-click:Phone`}
-      >
-        <Phone />792 563
-      </Button>
       {!props.hideCTA && (
         <Button
           variant="lightBlue"
