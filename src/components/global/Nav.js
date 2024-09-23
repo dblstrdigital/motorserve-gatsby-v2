@@ -137,10 +137,10 @@ const NavBar = ({ menuOpen, ...props }) => {
           },
         }}
         as="a"
-        href="tel:1300 869 585"
+        href="tel:869 585"
         data-tracking={`link-click:Phone`}
       >
-        <Phone /> 1300 869 585
+        <Phone />869 585
       </Button>
       {!props.hideCTA && (
         <Button
