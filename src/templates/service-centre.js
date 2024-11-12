@@ -80,9 +80,9 @@ const ServiceCentre = ({ pageContext }) => {
       if (originalScript) {
         originalScript.remove();
       }
-
-      const newScriptSrc = `${ORIGINAL_SCRIPT_SRC}-${pageContext.locationId}`;
-      locationSpecificScript = loadScript(scriptId, newScriptSrc, false, true);
+      //Update as of November 12, 2023, due to contact number is changing upload
+      //const newScriptSrc = `${ORIGINAL_SCRIPT_SRC}-${pageContext.locationId}`;
+      //locationSpecificScript = loadScript(scriptId, newScriptSrc, false, true);
     }
 
     return () => {
