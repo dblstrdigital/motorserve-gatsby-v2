@@ -26,11 +26,6 @@ export const navItems = [
     ],
   },
   {
-    title: 'Insurance Services',
-    url: '/insurance-services/',
-    secondLevel: [],
-  },
-  {
     title: 'Our Locations',
     url: '/service-centres/',
     secondLevel: [],
