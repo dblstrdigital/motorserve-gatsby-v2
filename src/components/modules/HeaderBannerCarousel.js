@@ -233,7 +233,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                       objectFit: 'cover',
                       objectPosition: '75%',
                     },
-                    backgroundColor: index === 0 ? '#000' : 'navy',
+                    backgroundColor: index === 0 ? '#1D1655' : 'navy',
                   }}
                 />
 
@@ -252,7 +252,6 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                         top: '0',
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        filter: index === 0 ? 'grayscale(1)' : 'unset',
                         bg: 'navy',
                         '@supports (object-fit: cover)': {
                           objectFit: 'cover',
