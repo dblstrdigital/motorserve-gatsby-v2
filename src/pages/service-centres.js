@@ -78,7 +78,7 @@ export const query = graphql`
 
 export function Head({ data }) {
   const seoTitle = data?.page?.seoTitle || 'Car Servicing, Repairs, Mechanics in Sydney and NSW | Motorserve'; 
-  const seoDescription = data?.page?.seoDescription || 'Visit one of our Motorserve service centres across NSW and ACT today for expert car servicing and repairs.'; 
+  const seoDescription = data?.page?.seoDescription || 'Visit one of our Motorserve service centres across NSW today for expert car servicing and repairs.'; 
 
   return (
     <SEO title={seoTitle} description={seoDescription} />
