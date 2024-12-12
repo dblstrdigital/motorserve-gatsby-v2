@@ -61,28 +61,6 @@ const CentreLocatorServiceFilter = ({ onChange, selected, style }) => (
       <Button
         variant="outlined"
         as="button"
-        data-tracking="btn-click:filterByType-Assessment"
-        className={selected === 'insurance' ? 'active' : null}
-        sx={{
-          ...style,
-          pl: 2,
-          pr: 3,
-          svg: {
-            height: '10px',
-            mr: '4px',
-            path: {
-              fill: selected === 'insurance' ? 'white' : 'navy',
-            },
-          },
-        }}
-        onClick={() => onChange('insurance')}
-      >
-        <AssessmentIcon />
-        Insurance assessment
-      </Button>
-      <Button
-        variant="outlined"
-        as="button"
         data-tracking="btn-click:filterByType-Paint"
         className={selected === 'paint' ? 'active' : null}
         sx={{
