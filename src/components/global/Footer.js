@@ -37,11 +37,6 @@ export const navItems = [
     secondLevel: [],
   },
   {
-    title: 'Insurance Services',
-    url: '/insurance-services/',
-    secondLevel: [],
-  },
-  {
     title: 'About Us',
     url: '#',
     secondLevel: [
