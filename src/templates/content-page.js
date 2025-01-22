@@ -1,6 +1,6 @@
 /* global iagDataLayer */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box } from 'rebass';
 import Page from '@components/global/Page';
 import Spacer from '@components/global/Spacer';
@@ -21,16 +21,25 @@ export function Head({ pageContext }) {
 }
 
 const ContentPage = ({ pageContext }) => {
+  const [pageClass, setPageClass] = useState('content--page');
+
   useEffect(() => {
+    // Update the class based on the URL
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    const formattedPath = path.replace(/[^a-zA-Z0-9-]/g, '-'); // Sanitize path to ensure it's valid as a class
+    setPageClass(`content--page ${formattedPath}`);
+    
+    // Push to the data layer
     iagDataLayer.push({
       event: 'pageview',
       pageId: '/motorserve/all' + window.location.pathname,
       data: {},
     });
   }, []);
+
   return (
     <Page title={'locations'}>
-      <Box as="main" className={`content--page`}>
+      <Box as="main" className={pageClass}>
         <HeaderBanner
           as="h1"
           slide={{
