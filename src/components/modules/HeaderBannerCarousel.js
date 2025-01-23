@@ -332,8 +332,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                         sx={{ p: 2 }}
                       >
                         {slide.cta.title}
-                      </Button> &nbsp;
-                      <a data-tracking="link-click:serviceCentres" class="css-163pho1" href="/service-centres/">Trading Hours</a>
+                      </Button> 
                     </Box>
                   )}
                   {slide.firstLogo && (
