@@ -196,7 +196,7 @@ class CentreLocatorMap extends React.Component {
           <script
             async={true}
             defer={true}
-            src={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_MAPS}&callback=initMap`}
+            src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBF4nyquXbWZtPqV5UYnjAn5vgbRj9CU&callback=initMap`}
           />
         </Helmet>
         <Box id="google-map" sx={{ width: '100%', height: '100%' }} />
