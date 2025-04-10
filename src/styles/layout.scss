@@ -208,3 +208,7 @@ main {
 .page--nameMyCar {
   padding-top: 0 !important;
 }
+
+.carousel-pips + div {
+  display: none;
+}
