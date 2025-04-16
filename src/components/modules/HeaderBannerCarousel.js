@@ -257,7 +257,7 @@ const HeaderBannerCarousel = ({ as = 'h2', slides = null }) => {
                           objectFit: 'cover',
                           width: ['100%', '', '65%', ''],
                           height: [
-                            slide.firstLogo ? '120px' : '190px',
+                            slide.firstLogo ? '120px' : '260px',
                             '',
                             '100%',
                           ],
