@@ -322,20 +322,10 @@ return (
           icons={bannerIcons.icons}
         />
       )}
-      <div className="extra-box">
-  <div className="extra-box-left">
-    {data.page && data.page._rawRichText && (
-      <RichText richText={data.page._rawRichText} />
-    )}
-  </div>
-  <div className="extra-box-right">
-    <img 
-      src="https://cdn.sanity.io/images/ap69w8f0/develop/4a9fa2a3b24831d48cbc9a2ad51e657efede31bd-1154x782.jpg" 
-      alt="Extra visual"
-    />
-  </div>
-</div>
-
+      <Spacer size="4" />
+      {data.page && data.page._rawRichText && (
+        <RichText richText={data.page._rawRichText} />
+      )}
 
       <Spacer size="4" />
       {bannerMessage && (

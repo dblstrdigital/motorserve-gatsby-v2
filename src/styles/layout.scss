@@ -212,27 +212,3 @@ main {
 .carousel-pips + div {
   display: none;
 }
-
-.extra-box {
-  position: relative;
-  margin: 80px auto;
-  max-width: 1140px;
-  width: 100%;
-}
-
-.extra-box img {
-  max-width: 400px;
-}
-.extra-box-right {
-  position: absolute;
-  top: 0px;
-  right: 0;
-}
-
-@media (max-width: 1140px) {
-  .extra-box-right {
-    position: relative;
-    margin-top: 30px;
-    margin-left: 20px;
-  }
-}
