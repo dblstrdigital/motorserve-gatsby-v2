@@ -39,6 +39,10 @@
 .css-1omvi7h + .css-1g6g8bm .css-mkdxy1 h3 + p {
   display: none;
 }
+.header-banner p.css-clkhfu {
+  max-width: 100%;
+  flex: 100%;
+}
 @media (min-width: 1140px) {
   .content--page.breathe-easy-promo .css-mkdxy1 > div > img {
     position: absolute;
