@@ -212,3 +212,10 @@ main {
 .carousel-pips + div {
   display: none;
 }
+
+.banner-message a {
+  font-weight: normal !important;
+}
+.banner-message a:hover {
+  color: #000 !important;
+}
