@@ -132,7 +132,7 @@ const HeaderBanner = ({ as = 'h2', slide }) => {
               <Heading.H2
                 as={as}
                 sx={{
-                  flex: [' 1 0 100%', '', '', '0 1 50%'],
+                  flex: [' 1 0 100%', '', '', '0 1 100%'],
                   fontSize: [9, '', '', 10],
                   lineHeight: '1',
                   pr: ['', '', '40px'],
@@ -145,12 +145,13 @@ const HeaderBanner = ({ as = 'h2', slide }) => {
                 <Text
                   as="p"
                   sx={{
-                    flex: [' 1 0 100%', '', '', '0 1 50%'],
+                    flex: [' 1 0 100%', '', '', '0 1 100%'],
                     maxWidth: ['500px', '', '', '300px'],
                     mr: 4,
                     mt: [3, 3, 3, 0],
                     fontSize: 3,
                     lineHeight: '1.4',
+                    fontWeight: 600,
                   }}
                 >
                   {slide.headerText}
