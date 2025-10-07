@@ -90,10 +90,6 @@ const utilItems = [
     url: '/terms-and-conditions/',
   },
   {
-    title: 'Our response to COVID-19',
-    url: '/covid-response/',
-  },
-  {
     title: 'Privacy Policy',
     url: '/privacy-policy/',
   },
