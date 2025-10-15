@@ -111,23 +111,6 @@ const ServiceCentres = ({ data, errors }) => {
             <Spacer size="3" />
           </>
         )}
-        <MaxContainer className="card-grid">
-        {page?.bannerMessage && (
-          <FullWidthBannerMessage
-            data={{
-              title: page.bannerMessage.title || '',
-              text: page.bannerMessage._rawSimpleText,
-              image: {
-                path: page.bannerMessage.image.asset.url,
-                alt: page.bannerMessage.image.alt,
-              },
-              ctaButton:
-                page.bannerMessage.ctaButton.title &&
-                page.bannerMessage.ctaButton,
-            }}
-          />
-        )}
-      </MaxContainer>
 
       </Box>
       
