@@ -4,10 +4,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { graphql } from 'gatsby';
 import { Box } from 'rebass';
 import Page from '@components/global/Page';
-import { MaxContainer } from '@components/global/Container';
 import Spacer from '@components/global/Spacer';
 import RichTextBookingForm from '@components/modules/RichTextBookingForm';
-import FullWidthBannerMessage from '@components/modules/FullWidthBannerMessage';
 import SEO from '../components/global/SEO';
 
 export const query = graphql`
