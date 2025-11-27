@@ -43,7 +43,8 @@ const buttonStyle = {
 
 class CentreLocator extends Component {
   state = {
-    states: ['nsw', 'act', 'vic', 'qld'],
+    //states: ['nsw', 'act', 'vic', 'qld'],
+    states: ['nsw', 'act', 'qld'],
     selectedState: null,
     selectedService: null,
     selectedMarkerId: null,
