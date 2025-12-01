@@ -67,10 +67,10 @@ const CentreLocatorNoResult = ({ type }) => (
         },
       }}
       as="a"
-      href={`tel:1300 869 585`}
+      href={`tel:1800 879 444`}
     >
       <Phone />
-      1300 869 585
+      1800 879 444
     </Box>
   </Box>
 );
