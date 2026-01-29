@@ -82,7 +82,7 @@ export const navItems = [
 
 const utilItems = [
   {
-    title: 'NRMA I Help Hub Ts & Cs',
+    title: 'NRMA | Help Hub T&Cs',
     url: '/nrma-i-help-hub-ts-cs/',
   },
   {
