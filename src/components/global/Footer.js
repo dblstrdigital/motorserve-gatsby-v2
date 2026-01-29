@@ -93,6 +93,10 @@ const utilItems = [
     title: 'Privacy Policy',
     url: '/privacy-policy/',
   },
+  {
+    title: 'Purchase Order Policy',
+    url: '/purchase-order-policy/',
+  },
 ];
 
 const FooterWrap = (props) => (
@@ -112,7 +116,7 @@ const FooterInner = (props) => (
       ...containerInnerStyles,
       position: 'relative',
       maxWidth: '1320px',
-      m: '0 auto',
+      m: '0 auto 20px',
     }}
     {...props}
   />
