@@ -94,7 +94,7 @@ const utilItems = [
     url: '/privacy-policy/',
   },
   {
-    title: 'Purchase Order Policy',
+    title: 'Purchase Order T&Cs',
     url: '/purchase-order-policy/',
   },
 ];
